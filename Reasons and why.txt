@@ -1,0 +1,5 @@
+The Defense Meteorological Program Operational Linescan System (DMSP OLS) Nighttime Lights Time Series Version 4 is a dataset that provides information on nighttime lights observed from space. The DMSP OLS is a satellite-based sensor designed to collect data on atmospheric and surface conditions.
+
+The nighttime lights data from DMSP OLS is particularly useful for studying urbanization, economic activity, and energy consumption patterns over time. It allows researchers and analysts to observe changes in the brightness and distribution of lights at night, providing insights into human activities and development.
+
+By analyzing the DMSP OLS Nighttime Lights Time Series, researchers can track changes in urban areas, monitor the expansion of cities, study population dynamics, and assess the impact of various factors on energy consumption patterns. This dataset has applications in urban planning, environmental studies, disaster management, and socio-economic research.
