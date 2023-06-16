@@ -1,0 +1,17 @@
+'https://code.earthengine.google.com/947c914b1ad8dda8ff515408016e0d41 ##This link is redirected to GEE platform.
+# Upload the Area of interest vector file, and give it a name. Here, it was called as roi.
+var dataset = ee.ImageCollection('NOAA/DMSP-OLS/NIGHTTIME_LIGHTS')
+                  .filter(ee.Filter.date('2010-01-01', '2014-12-31'))
+                  .filterBounds(roi);
+var nighttimeLights = dataset.select('stable_lights');
+var radiance = nighttimeLights.mean();
+var brightness = ee.Image(10).pow(radiance.divide(10));
+var pollutionIndex = brightness.divide(100);
+var Vis = {
+  min: 0,
+  max: 1,
+  palette: ["Lime", "blue", "green", "yellow", "red"]
+};
+Map.centerObject(roi, 5);
+// Map.addLayer(nighttimeLights, nighttimeLightsVis, 'Nighttime Lights');
+Map.addLayer(pollutionIndex.clip(roi), Vis, 'Night Light Pollution Index');
